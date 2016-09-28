@@ -1,23 +1,53 @@
 body{
   margin: 0;
-    background-image: url(chat.jpg)
+    /*background-image: url(chat.jpg)*/
 }
-
+container{
+    width:100%;
+    height: auto;
+    margin:auto;
+}
 header{
-    width: auto;
+    width: 100%;
     height: 50px;
     background-color:#ff9; 
     text-align: center;
+    margin:auto;
 }
 
 nav{
-    width:auto;
+    width:100%;
     height: 20px;
     background-color: burlywood;
+    margin:auto;
 }
 
+/*aside{
+    width:200px;
+    height: 400px;
+    float: right;
+    background-color:bisque;
+   position: absolute;
+    
+}*/
 section{
-    width:auto;
-    height: 1000px;
-    /*background-color: rgba(255,255,100,0.3);*/
+    width:100%;
+    height: 400px;
+    background-color: rgba(255,255,100,0.3);
+    margin:auto;
+    /*padding-right: 10px;*/
+   
+}
+img{
+    margin-top: 10px;
+    padding: 10px;
+}
+
+
+footer{
+    width: 100%;
+    height: 20px;
+    background-color:#ff9; 
+    text-align: center;
+    margin:auto;
 }
