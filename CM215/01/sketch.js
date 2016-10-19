@@ -6,7 +6,7 @@ function setup() {
   createCanvas(windowWidth,windowHeight);
   ellipseMode(CENTER);
   stroke(0);
-  //noFill();
+  noFill();
   strokeWeight(5);
 }
 
@@ -18,8 +18,9 @@ function draw() {
     
     
     if((i+1)<touches.length){
-      fill(125);
+      
       beginShape(TRIANGLES);
+      fill(175);
 vertex(touches[i].x,touches[i].y);
 vertex(touches[i].x,touches[i].y);
 vertex(touches[i+1].x,touches[i+1].y);
