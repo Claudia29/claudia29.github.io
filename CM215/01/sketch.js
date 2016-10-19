@@ -16,41 +16,17 @@ function draw() {
   for(var i=0;i<touches.length;i++){
     ellipse(touches[i].x,touches[i].y,150,150);
     
-    
+    fill(255,0,0);
     if((i+1)<touches.length){
-      
-      beginShape(TRIANGLES);
-      
-vertex(touches[i].x,touches[i].y);
-vertex(touches[i].x,touches[i].y);
-vertex(touches[i+1].x,touches[i+1].y);
-vertex(touches[i].x,touches[i].y);
-vertex(touches[i].x,touches[i].y);
-vertex(touches[i+1].x,touches[i+1].y);
-endShape();
-
-    //beginShape();
-      //vertex(touches[i].x,touches[i].y);
-      //vertex(touches[i].x,touches[i].y);
-      //vertex(touches[i+1].x,touches[i+1].y);
-      //vertex(touches[i+1].x,touches[i+1].y);
-    //endShape(CLOSE);
+    beginShape();
+      vertex(touches[i].x,touches[i].y);
+       endShape(CLOSE);
     }
   else{ 
-          beginShape(TRIANGLES);
-vertex(touches[i].x,touches[i].y);
-vertex(touches[i].x,touches[i].y);
-vertex(touches[0].x,touches[0].y);
-vertex(touches[i].x,touches[i].y);
-vertex(touches[i].x,touches[i].y);
-vertex(touches[0].x,touches[0].y);
-endShape();
-    //beginShape();
-      //vertex(touches[i].x,touches[i].y);
-     // vertex(touches[i].x,touches[i].y);
-    //  vertex(touches[0].x,touches[0].y);
-    //  vertex(touches[0].x,touches[0].y);
-    //endShape(CLOSE);
+         
+    beginShape();
+     vertex(touches[0].x,touches[0].y);
+    endShape(CLOSE);
     }
  
    
