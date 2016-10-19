@@ -21,7 +21,7 @@ function draw() {
     beginShape();
       vertex(touches[i].x,touches[i].y);
     endShape(CLOSE);
-    }
+    //}
   //else{ 
          
     //beginShape();
