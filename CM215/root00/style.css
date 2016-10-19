@@ -46,7 +46,11 @@ img{
     margin-top: 10px;
     padding: 10px;
 }
-
+ul{
+	list-style: none;
+	padding:0;
+	
+    }
 
 footer{
     width: 100%;
