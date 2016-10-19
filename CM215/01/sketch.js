@@ -16,7 +16,7 @@ function draw() {
   
     ellipse(touches[i].x,touches[i].y,150,150);
     
-    fill(255,0,0);
+
     //if((i+1)<touches.length){
     beginShape();
     for(var i=0;i<touches.length;i++){
