@@ -17,5 +17,5 @@ function draw() {
 
 function drawBall(){
   fill(125);
-  ellipse(windowWidth/2, windowHeight/2, ballSize,ballSize);
+  ellipse(windowWidth/2, rotationX+windowHeight/2, ballSize,ballSize);
 }
