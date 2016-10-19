@@ -21,6 +21,7 @@ function draw() {
     beginShape();
     for(var i=0;i<touches.length;i++){
       vertex(touches[i].x,touches[i].y);
+    }
     endShape(CLOSE);
   // }
   //else{ 
@@ -32,6 +33,6 @@ function draw() {
  
    
    
-  }
+  
 }
 
