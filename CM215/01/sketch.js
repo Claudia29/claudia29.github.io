@@ -18,6 +18,7 @@ function draw() {
     
     
     if((i+1)<touches.length){
+      fill(125);
       beginShape(TRIANGLES);
 vertex(touches[i].x,touches[i].y);
 vertex(touches[i].x,touches[i].y);
