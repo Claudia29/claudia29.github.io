@@ -19,7 +19,7 @@ function draw() {
     
     if((i+1)<touches.length){
       
-    beginShape(fill(255,0,0));
+    beginShape();
       vertex(touches[i].x,touches[i].y);
       vertex(touches[i].x,touches[i].y);
       vertex(touches[i+1].x,touches[i+1].y);
