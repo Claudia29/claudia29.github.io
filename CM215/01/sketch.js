@@ -20,7 +20,7 @@ function draw() {
     if((i+1)<touches.length){
       
       beginShape(TRIANGLES);
-      fill(175);
+      
 vertex(touches[i].x,touches[i].y);
 vertex(touches[i].x,touches[i].y);
 vertex(touches[i+1].x,touches[i+1].y);
