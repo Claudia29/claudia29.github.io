@@ -18,21 +18,37 @@ function draw() {
     
     
     if((i+1)<touches.length){
-      
-    beginShape();
-      vertex(touches[i].x,touches[i].y);
-      vertex(touches[i].x,touches[i].y);
-      vertex(touches[i+1].x,touches[i+1].y);
-      vertex(touches[i+1].x,touches[i+1].y);
-    endShape(CLOSE);
+      beginShape(TRIANGLES);
+vertex(touches[i].x,touches[i].y);
+vertex(touches[i].x,touches[i].y);
+vertex(touches[i].x,touches[i].y);
+vertex(touches[i+1].x,touches[i+1].y);
+vertex(touches[i+1].x,touches[i+1].y);
+vertex(touches[i+1].x,touches[i+1].y);
+endShape();
+
+    //beginShape();
+      //vertex(touches[i].x,touches[i].y);
+      //vertex(touches[i].x,touches[i].y);
+      //vertex(touches[i+1].x,touches[i+1].y);
+      //vertex(touches[i+1].x,touches[i+1].y);
+    //endShape(CLOSE);
     }
   else{ 
-    beginShape();
-      vertex(touches[i].x,touches[i].y);
-      vertex(touches[i].x,touches[i].y);
-      vertex(touches[0].x,touches[0].y);
-      vertex(touches[0].x,touches[0].y);
-    endShape(CLOSE);
+          beginShape(TRIANGLES);
+vertex(touches[i].x,touches[i].y);
+vertex(touches[i].x,touches[i].y);
+vertex(touches[i].x,touches[i].y);
+vertex(touches[0].x,touches[0].y);
+vertex(touches[0].x,touches[0].y);
+vertex(touches[0].x,touches[0].y);
+endShape();
+    //beginShape();
+      //vertex(touches[i].x,touches[i].y);
+     // vertex(touches[i].x,touches[i].y);
+    //  vertex(touches[0].x,touches[0].y);
+    //  vertex(touches[0].x,touches[0].y);
+    //endShape(CLOSE);
     }
  
    
