@@ -12,7 +12,9 @@ header{
     height: 50px;
     background-color:#ff9; 
     text-align: center;
+    font-size:30pt;
     margin:auto;
+    
 }
 
 nav{
