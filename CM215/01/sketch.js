@@ -13,22 +13,22 @@ function setup() {
 function draw() {
   background(255);
   
-  for(var i=0;i<touches.length;i++){
+  
     ellipse(touches[i].x,touches[i].y,150,150);
     
     fill(255,0,0);
-    if((i+1)<touches.length){
+    //if((i+1)<touches.length){
     beginShape();
+    for(var i=0;i<touches.length;i++){
       vertex(touches[i].x,touches[i].y);
-      vertex(touches[i+1].x,touches[i+1].y);
     endShape(CLOSE);
-    }
-  else{ 
+  // }
+  //else{ 
          
-    beginShape();
-    vertex(touches[0].x,touches[0].y);
-  endShape(CLOSE);
-    }
+    //beginShape();
+    //vertex(touches[0].x,touches[0].y);
+ // endShape(CLOSE);
+    //}
  
    
    
