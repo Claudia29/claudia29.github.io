@@ -14,7 +14,11 @@ function draw() {
   background(255);
   
   for(var i=0;i<touches.length;i++){
+    ellipse(touches[i].x,touches[i].y,150,150);
+    
+    
     if((i+1)<touches.length){
+      fill(255,0,0);
     beginShape();
       vertex(touches[i].x,touches[i].y);
       vertex(touches[i].x,touches[i].y);
@@ -29,14 +33,10 @@ function draw() {
       vertex(touches[0].x,touches[0].y);
       vertex(touches[0].x,touches[0].y);
     endShape(CLOSE);
-  }
+    }
  
-    ellipse(touches[i].x,touches[i].y,150,150);
+   
    
   }
 }
 
-//function touchStarted() {
-  
- //fill(random(0,255),random(0,255),random(0,255)); 
-//}
