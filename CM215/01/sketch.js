@@ -23,12 +23,12 @@ function draw() {
       vertex(touches[i+1].x,touches[i+1].y);
     endShape(CLOSE);
     }
-  //else{ 
+  else{ 
          
-    //beginShape();
-     //vertex(touches[0].x,touches[0].y);
-    //endShape(CLOSE);
-   // }
+    beginShape();
+    vertex(touches[0].x,touches[0].y);
+  endShape(CLOSE);
+    }
  
    
    
