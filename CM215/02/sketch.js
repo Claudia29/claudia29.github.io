@@ -2,12 +2,13 @@ var ballSize;
 function setup() {
  createCanvas(windowWidth,windowHeight);
  ellipseMode(CENTER);
- ballSize = 30;
+ ballSize = 200;
 }
 
 function draw() {
-  drawBall();
+  
  background(255);
+ drawBall();
  textSize(40);
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
