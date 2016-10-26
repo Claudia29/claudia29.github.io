@@ -11,7 +11,7 @@ pX = windowWidth/2;
  pY = windowHeight/2;
  vX = 0;
  vY = 0;
- f = 0.00001;
+ f = 0.01;
  
 }
 
