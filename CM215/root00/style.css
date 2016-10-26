@@ -48,7 +48,7 @@ nav a:link{
 	/*background-color:#f00*/;
 }
     nav a:visited{color:#ddd;}
-    nav a:hover{height:30px;
+    nav a:hover{height:20px;
 	
 	background-color:#fff;
 	font-size:20px;}
@@ -57,7 +57,7 @@ nav a:link{
 section{
     width:1024px;
     height: 500px;
-    background-image: url(beach.jpg);
+    background-image: url(mag1.jpg);
     background-position: center;
     /*background-color: rgba(255,255,255,0.3)*/;
     margin:auto;
@@ -68,8 +68,20 @@ section{
 
 footer{
     width: 1024px;
-    height: 20px;
+    height: 25px;
+    font-size:10pt ;
+    font-family: verdana;
     background-color:#000; 
     text-align: center;
     margin:auto;
+    
+}
+footer a{
+	float: left;
+    width:100%;
+	text-align: center;
+	text-decoration: none;
+    }
+footer a:link{
+	color:#ddd;
 }
