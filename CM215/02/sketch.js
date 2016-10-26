@@ -33,7 +33,7 @@ function draw() {
  pY += vY;
 
  if ((pX + ballSize/2) >= windowWidth ||(pX + ballSize/2) <= 0  ){
-   vX = -vY;
+   vX = -vX;
  }
  
  
