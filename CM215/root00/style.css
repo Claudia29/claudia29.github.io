@@ -6,6 +6,7 @@ container{
     width:1024px;
     height: auto;
     margin:auto;
+
 }
 header{
     width: 1024px;
@@ -25,10 +26,11 @@ nav{
     background-color:#000; 
     font-size: 20px;
     margin:auto;
+    
 }
 nav a{
 	float: left;
-	width:25%;
+	width:245px;
     padding:3px;
     height:30px;
 	text-align: center;
@@ -36,8 +38,7 @@ nav a{
     }
 .item_navPrincipal{
 	float:left;
-    width:25%;
-    /*border-right: solid 2px #fff*/;
+    width:245px;
 }
 ul{
 	list-style: none;
@@ -56,7 +57,7 @@ nav a:link{
 section{
     width:1024px;
     height: 500px;
-    background-image: url(obll.jpg);
+    background-image: url(beach.jpg);
     background-position: center;
     /*background-color: rgba(255,255,255,0.3)*/;
     margin:auto;
