@@ -3,16 +3,16 @@ body{
 
 }
 container{
-    width:100%;
+    width:1024px;
     height: auto;
     margin:auto;
 }
 header{
-    width: 100%;
+    width: 1024px;
     height: 70px;
-    background-color:#fff; 
+    background-color:#000; 
     text-align: center;
-    color:#000;
+    color:#fff;
     font-size:40pt;
     font-family:fantasy;
     margin:auto;
@@ -20,19 +20,25 @@ header{
 }
 
 nav{
-    width:100%;
+    width:1024px;
     height: 30px;
     background-color:#000; 
     font-size: 20px;
+    margin:auto;
 }
 nav a{
 	float: left;
-	/*margin-right:1px;*/
 	width:25%;
+    padding:3px;
     height:30px;
 	text-align: center;
 	text-decoration: none;
     }
+.item_navPrincipal{
+	float:left;
+    width:25%;
+    /*border-right: solid 2px #fff*/;
+}
 ul{
 	list-style: none;
 }
@@ -41,27 +47,28 @@ nav a:link{
 	/*background-color:#f00*/;
 }
     nav a:visited{color:#ddd;}
-    nav a:hover{
-	/*background-position:-128px*/;
+    nav a:hover{height:30px;
+	
 	background-color:#fff;
 	font-size:20px;}
     nav a:active{color:#fff;color:#fff;}
 
 section{
-    width:100%;
+    width:1024px;
     height: 500px;
-    background-image: url(beach.jpg);
+    background-image: url(obll.jpg);
+    background-position: center;
     /*background-color: rgba(255,255,255,0.3)*/;
     margin:auto;
-    /*padding-right: 10px;*/
+   
    
 }
 
 
 footer{
-    width: 100%;
+    width: 1024px;
     height: 20px;
     background-color:#000; 
     text-align: center;
-    margin-top:20px;
+    margin:auto;
 }
