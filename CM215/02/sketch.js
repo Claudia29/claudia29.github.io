@@ -32,8 +32,8 @@ function draw() {
  vY += aY;
  pY += vY;
 
- if (pX > windowWidth){
-   vX = -vY;
+ if (pX > windowWidth, vX = -vY;){
+   pX -= vX;
  }
  
  
