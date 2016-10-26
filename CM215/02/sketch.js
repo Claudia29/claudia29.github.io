@@ -8,7 +8,7 @@ function setup() {
  ellipseMode(CENTER);
  ballSize = 50;
  Px = windowWidth/2;
-
+ Py = windowHeight/2;
  Vx = 0;
 Vy = 0;
  F = 0,01;
@@ -42,6 +42,6 @@ function draw() {
 
 function drawBall(){
   fill(125);
-  ellipse(Vx, Vy, ballSize,ballSize);
+  ellipse(Px, Py, ballSize,ballSize);
   
 }
