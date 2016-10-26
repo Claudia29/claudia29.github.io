@@ -1,16 +1,17 @@
 var ballSize;
-var Vx, Vy;
-var Px, Py;
-var Ax, Ay;
-var F;
+var vY, vY;
+var pX, pY;
+var aY, aY;
+var f;
 function setup() {
  createCanvas(windowWidth,windowHeight);
  ellipseMode(CENTER);
  ballSize = 50;
- Px = windowWidth/2;
- Vx = 0;
- Vy = 0;
- F = 0,01;
+pX = windowWidth/2;
+ pX = windowWidth/2;
+ vX = 0;
+ vY = 0;
+ f = 0,01;
  
 }
 
@@ -23,13 +24,13 @@ function draw() {
  text("Ry: " + floor(rotationY), 100, 150);
  text("Rz: " + floor(rotationZ), 100, 200);
  
- Ax = rotationY * F;
- Vx = Vx + Ax;
- Px = Px + Vx;
+ aX = rotationY * f;
+ vX += aX;
+ pX += vX;
  
- Ay = rotationX *F;
- Vy = Vy + Ay;
- Py = Py + Vy;
+ aY = rotationX;
+ vY += aY;
+ pY += vY;
 
  
  
@@ -41,6 +42,6 @@ function draw() {
 
 function drawBall(){
   fill(125);
-  ellipse(Px, rotationX+windowHeight/2, ballSize,ballSize);
+  ellipse(pX, pY, ballSize,ballSize);
   
 }
