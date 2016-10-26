@@ -8,7 +8,7 @@ function setup() {
  ellipseMode(CENTER);
  ballSize = 50;
 pX = windowWidth/2;
- pX = windowWidth/2;
+ pX = windowHeight/2;
  vX = 0;
  vY = 0;
  f = 0.00001;
