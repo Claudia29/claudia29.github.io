@@ -1,7 +1,7 @@
 var ballSize;
-var vY, vY;
+var vX, vY;
 var pX, pY;
-var aY, aY;
+var aX, aY;
 var f;
 function setup() {
  createCanvas(windowWidth,windowHeight);
