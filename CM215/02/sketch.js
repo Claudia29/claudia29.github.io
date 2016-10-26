@@ -28,11 +28,11 @@ function draw() {
  vX += aX;
  pX += vX;
  
- aY = rotationX;
+ aY = rotationX  * f;
  vY += aY;
  pY += vY;
 
- if (pX + ballSize/2 > windowWidth || pX + ballSize/2 < 0  ){
+ if (pX + ballSize/2 >= windowWidth || pX + ballSize/2 <= 0  ){
    vX = -vX;
  }
  
