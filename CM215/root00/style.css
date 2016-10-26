@@ -23,33 +23,32 @@ header{
 nav{
     width:1024px;
     height: 30px;
-    background-color:#000; 
+    background-color:#f00; 
     font-size: 20px;
+    font-family: verdana;
     margin:auto;
     
 }
 nav a{
-	float: left;
-	width:245px;
-    padding:3px;
-    height:30px;
-	text-align: center;
-	text-decoration: none;
+	display:block;
+   text-decoration: none;
     }
-.item_navPrincipal{
+li{
 	float:left;
-    width:245px;
+    width:25%;
 }
-ul{
+ul{width:25%;
 	list-style: none;
+    /*padding-top: 1px*/; 
+    margin: auto;
 }
 nav a:link{
-	color:#f00;
+	color:#fff;
 	/*background-color:#f00*/;
 }
-    nav a:visited{color:#ddd;}
+    nav a:visited{color:#fff;}
     nav a:hover{height:20px;
-	
+	color: #ddd;
 	background-color:#fff;
 	font-size:20px;}
     nav a:active{color:#fff;color:#fff;}
@@ -85,3 +84,5 @@ footer a{
 footer a:link{
 	color:#ddd;
 }
+footer a:visited{color:#ddd;}
+    footer a:hover{color:#fff;font-size:10pt;}

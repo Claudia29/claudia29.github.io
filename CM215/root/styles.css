@@ -156,7 +156,7 @@
 	background-position:-128px;
 	background-color:#ddd;
 	font-size:20px;}
-    #menu a:active{color:#fff;color#fff;}
+    #menu a:active{color:#fff;color:#fff;}
  
     @media print{
 	body{box-shadow:none;}
