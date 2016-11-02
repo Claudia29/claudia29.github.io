@@ -51,10 +51,10 @@ function draw() {
 function drawBall(){
   fill(125);
   ellipse(pX, pY, ballSize,ballSize);
-  fill(255,0,0);
+  fill(random(255,0,0));
   ellipse(pX1, pY1, ballSize,ballSize);
-  fill(0,0,255);
+  fill(random(0,0,255));
   ellipse(pX2, pY2, ballSize,ballSize);
-  fill(0,255,0);
+  fill(random(0,255,0));
   ellipse(pX3, pY3, ballSize,ballSize);
 }
