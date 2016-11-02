@@ -60,11 +60,11 @@ if (dist(pX,pY, pX2,pY2) <= (R + r2)) {
  
  if(dist(pX,pY, pX2,pY2) <= (R + r2)){
    //text("GA!", width / 2, height / 2, 200, 50);
-   score -= 10;
+   score += -10;
  }
  if(dist(pX,pY, pX3,pY3) <= (R + r3)){
    //text("GAME!", width / 2, height / 2, 200, 50);
-   score += 0;
+   score += 1;
  }
  
 }
