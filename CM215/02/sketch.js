@@ -35,7 +35,7 @@ function draw() {
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
  //text("Rz: " + floor(rotationZ), 100, 200);
- text("Score:0 ", 100, 200);
+ text("Score:"+score, 100, 200);
  
  aX = rotationY * f;
  vX += aX;
@@ -60,7 +60,7 @@ if (dist(pX,pY, pX2,pY2) <= (R + r2)) {
  
  if(dist(pX,pY, pX2,pY2) <= (R + r2)){
    //text("GA!", width / 2, height / 2, 200, 50);
-   score -= 10
+   score -= 10;
  }
  if(dist(pX,pY, pX3,pY3) <= (R + r3)){
    //text("GAME!", width / 2, height / 2, 200, 50);
