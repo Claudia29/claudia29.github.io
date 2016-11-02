@@ -3,21 +3,26 @@ var vX, vY;
 var pX, pY, pX1,pX2, pY1, pY2, pX3, pY3;
 var aX, aY;
 var f;
+var R, r1, r2, r3;
 function setup() {
  createCanvas(windowWidth,windowHeight);
  ellipseMode(CENTER);
  ballSize = 50;
 pX = windowWidth/2;
  pY = windowHeight/2;
- pX1 = windowWidth/2 - 50;
- pY1 = windowHeight/2;
- pX2 = windowWidth/2 + 50;
- pY2 = windowHeight/2;
- pX3 = windowWidth/2 ;
- pY3 = windowHeight/2 + 50;
+ pX1 =random(10,windowWidth);
+ pY1 = random(10,windowHeight);
+ pX2 = random(10,windowWidth);
+ pY2 = random(10,windowHeight);
+ pX3 = random(10,windowWidth);
+ pY3 = random(10,windowHeight);
  vX = 0;
  vY = 0;
  f = 0.01;
+ R = ballSize/2;
+ r1 = (ballSize/2)/2;
+ r2 = (ballSize/2)/2;
+ r3 = (ballSize/2)/2;
  
 }
 
@@ -46,15 +51,26 @@ function draw() {
    vY = -vY;
  }
  
+if (dist(pX,pY, pX2,pY2) <= (R + r2)) {
+   text("GA!", width / 2, height / 2, 200, 50);
+ }
+ 
+ if(dist(pX,pY, pX2,pY2) <= (R + r2)){
+   text("GA!", width / 2, height / 2, 200, 50);
+ }
+ if(dist(pX,pY, pX3,pY3) <= (R + r3)){
+   text("GAME!", width / 2, height / 2, 200, 50);
+ }
+ 
 }
 
 function drawBall(){
   fill(125);
   ellipse(pX, pY, ballSize,ballSize);
-  fill(random(255,0,0));
-  ellipse(pX1, pY1, ballSize,ballSize);
-  fill(random(0,0,255));
-  ellipse(pX2, pY2, ballSize,ballSize);
-  fill(random(0,255,0));
-  ellipse(pX3, pY3, ballSize,ballSize);
+  fill(0,255,0);
+  ellipse(pX1, pY1, ballSize/2,ballSize/2);
+  fill(255,255,0);
+  ellipse(pX2, pY2, ballSize/2,ballSize/2);
+  fill(255,0,0);
+  ellipse(pX3, pY3, ballSize/2,ballSize/2);
 }
