@@ -4,6 +4,7 @@ var pX, pY, pX1,pX2, pY1, pY2, pX3, pY3;
 var aX, aY;
 var f;
 var R, r1, r2, r3;
+var score;
 function setup() {
  createCanvas(windowWidth,windowHeight);
  ellipseMode(CENTER);
@@ -23,7 +24,7 @@ pX = windowWidth/2;
  r1 = (ballSize/2)/2;
  r2 = (ballSize/2)/2;
  r3 = (ballSize/2)/2;
- 
+ score = 0;
 }
 
 function draw() {
@@ -33,7 +34,8 @@ function draw() {
  textSize(40);
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
- text("Rz: " + floor(rotationZ), 100, 200);
+ //text("Rz: " + floor(rotationZ), 100, 200);
+ text("Score: ", 100, 200);
  
  aX = rotationY * f;
  vX += aX;
@@ -52,14 +54,17 @@ function draw() {
  }
  
 if (dist(pX,pY, pX2,pY2) <= (R + r2)) {
-   text("GA!", width / 2, height / 2, 200, 50);
+   //text("s!", width / 2, height / 2, 200, 50);
+   score += 10;
  }
  
  if(dist(pX,pY, pX2,pY2) <= (R + r2)){
-   text("GA!", width / 2, height / 2, 200, 50);
+   //text("GA!", width / 2, height / 2, 200, 50);
+   score -= 10
  }
  if(dist(pX,pY, pX3,pY3) <= (R + r3)){
-   text("GAME!", width / 2, height / 2, 200, 50);
+   //text("GAME!", width / 2, height / 2, 200, 50);
+   score === 0;
  }
  
 }
