@@ -35,7 +35,7 @@ function draw() {
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
  //text("Rz: " + floor(rotationZ), 100, 200);
- text("Score: ", 100, 200);
+ text("Score:0 ", 100, 200);
  
  aX = rotationY * f;
  vX += aX;
