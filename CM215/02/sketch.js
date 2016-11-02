@@ -10,11 +10,11 @@ function setup() {
 pX = windowWidth/2;
  pY = windowHeight/2;
  pX1 = windowWidth/2 - 50;
- pY1 = windowHeight/2 - 50;
+ pY1 = windowHeight/2;
  pX2 = windowWidth/2 + 50;
- pY2 = windowHeight/2 + 50;
- pX3 = windowWidth/2 - 100;
- pY3 = windowHeight/2 -100;
+ pY2 = windowHeight/2;
+ pX3 = windowWidth/2 ;
+ pY3 = windowHeight/2 + 50;
  vX = 0;
  vY = 0;
  f = 0.01;
