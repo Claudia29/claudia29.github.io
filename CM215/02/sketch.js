@@ -1,6 +1,6 @@
 var ballSize;
 var vX, vY;
-var pX, pY;
+var pX, pY, pX1,pX2, pY1, pY2;
 var aX, aY;
 var f;
 function setup() {
@@ -9,6 +9,10 @@ function setup() {
  ballSize = 50;
 pX = windowWidth/2;
  pY = windowHeight/2;
+ pX1 = windowWidth/2 - 50;
+ pY1 = windowHeight/2 - 50;
+ pX2 = windowWidth/2 + 50;
+ pY2 = windowHeight/2 + 50;
  vX = 0;
  vY = 0;
  f = 0.01;
@@ -45,5 +49,7 @@ function draw() {
 function drawBall(){
   fill(125);
   ellipse(pX, pY, ballSize,ballSize);
+  ellipse(pX1, pY1, ballSize,ballSize);
+  ellipse(pX2, pY2, ballSize,ballSize);
   
 }

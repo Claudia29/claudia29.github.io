@@ -1,0 +1,124 @@
+@media screen and (min-width: 1024px){
+body{margin:0;background-image:url(r6.png);background-size:cover;background-position:center center;background-attachment:fixed;}
+#container{margin:0;width:100%;position:relative;height:auto;margin-top:0;}
+header,nav,footer{width:100%;margin:auto;font-family: verdana;}
+section{margin-left:2%;margin-top:180px;width:60%;height:600px;padding-right:10px;font-size:12pt;background:rgba(255,255,255,0.7);overflow:hidden;transition: all 2s cubic-bezier(.45,0,.55,1) 0;}
+aside{width:25%;position:fixed;right:2%;height:1000px;color:#999;text-align:center;top:180px; background:rgba(0,0,0,0.5);transition: all 2s cubic-bezier(.45,0,.55,1) 0;}
+}
+@media screen and (min-width: 400px) and (max-width:1024px){
+body{margin:0;background-image:url(r6.png);background-size:cover;background-position:center center;background-attachment:fixed;}
+#container{margin:0;width:100%;position:relative;height:auto;margin-top:0;}
+header,nav,footer{width:100%;margin:auto;font-family: verdana;}
+section{margin-left:2%;margin-top:180px;width:60%;height:500px;padding-right:10px;font-size:12pt;background:rgba(255,255,255,0.5);overflow:hidden;transition: all 2s cubic-bezier(.45,0,.55,1) 0;}
+aside{width:25%;position:fixed;right:2%;height:1000px;color:#999;text-align:center;top:180px; background:rgba(0,0,0,0.5);transition: all 2s cubic-bezier(.45,0,.55,1) 0;}
+}
+ @media screen and (max-width:400px){
+body{margin:0;background-image:url(r6.png);background-size:cover;background-position:center center;background-attachment:fixed;}
+#container{margin:0;width:100%;position:relative;height:auto;margin-top:0;}
+header,nav,footer{width:100%;margin:auto;font-family: verdana;}
+section{margin-left:0;margin-top:160px;width:100%;height:auto;padding-right:10px;font-size:12pt;background:rgba(255,255,255,0.6);overflow:hidden;transition: all 2s cubic-bezier(.45,0,.55,1) 0;}
+
+}   
+
+@media screen and (max-width:320px){
+body{margin:0;background-image:url(r6.png);background-size:cover;background-position:center center;background-attachment:fixed;}
+#container{margin:0;width:100%;position:relative;height:auto;margin-top:0;}
+header,nav,footer{width:100%;margin-left:0;margin:0;font-family: verdana;}
+section{margin-left:0;margin-top:160px;width:100%;height:auto;padding-right:10px;font-size:12pt;background:rgba(255,255,255,0.6);overflow:hidden;transition: all 2s cubic-bezier(.45,0,.55,1) 0;}
+
+}
+
+header {
+	height:100px;
+	text-align: center;
+	font-size:40pt;
+	font-weight: bold;
+	color: #ddd;
+	text-shadow:3px 1px 1px #fff, -1px -1px 1px #000;
+    background:rgba(0,0,0,0.7);
+    top:0;
+    position:fixed;
+    transition: all 1s cubic-bezier(.45,0,.55,1) 0;
+    }
+header:hover{
+    height:100px;
+    background:0;
+}
+    #page_index nav #news, #page_contact nav #contact, #page_portfolio nav #portfolio, #page_about nav #about{
+	box-shadow: 0 0 8px #666 inset;
+    }
+
+
+
+nav {
+	height:40px;
+	background:rgba(255,255,255,0.8);
+    top:100px;
+    position:fixed;
+    text-align: center;
+    }
+
+
+aside:hover{
+	     height:auto;
+         color:#fff;
+         text-align:justify;
+         background:rgba(0,0,0,0.5);
+        
+    }
+section:hover{
+         height:auto;
+         color:#fff;
+         text-align:justify;
+         background:0;
+         margin-top:160px;
+         }
+
+footer {
+	height:30px; 
+	color:#ddd;
+	font-size: 10pt;
+	text-align: center;
+    background:rgba(0,0,0,0.7);
+    position:fixed;
+    bottom:0;
+    }
+
+    ul{
+	list-style: none;
+    }
+
+    nav a{
+	float:left;
+	width:25%;
+    text-decoration:none;
+    }
+
+    .superImportant{
+	color:#fff;
+	
+    }
+    
+    nav a:link{
+	color:#000;
+}
+    nav a:visited{color:#000;}
+    nav a:hover{
+	font-size:15px;}
+    nav a:active{color:#fff;color:#fff;}
+ 
+    @media print{
+	body:after{box-shadow:none;content:url(code.png);}
+	aside{display:none;}
+	section{
+	      margin-right:auto;
+	      margin-left:auto;
+          margin-top:120px;
+	      width:550px;
+	      font-family:georgia;
+	      font-size:12pt;
+    }
+	nav{display:none;}
+	
+      
+}

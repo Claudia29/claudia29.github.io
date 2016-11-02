@@ -3,60 +3,64 @@ body{
 
 }
 container{
-    width:1024px;
+    width:90%;
     height: auto;
     margin:auto;
 
 }
 header{
-    width: 1024px;
-    height: 70px;
-    background-color:#000; 
-    text-align: center;
-    color:#fff;
-    font-size:40pt;
-    font-family:fantasy;
+    width: 50%;
+    height: 80px;
+    /*background-color:#fff*/; 
+    text-align:left;
+    color:#000;
+    font-size:40px;
+    font-family:Helvetica;
     margin:auto;
+    margin-right:45%;
+    margin-top: 30px;
     
+}
+img{
+  border-bottom:100px;
 }
 
 nav{
-    width:1024px;
+    width:50%;
     height: 30px;
-    background-color:#f00; 
-    font-size: 20px;
+     font-size: 15px;
     font-family: verdana;
     margin:auto;
-    
+    margin-left: 50%;
+    top: 50px;
+    position: fixed; 
 }
-nav a{
+nav a{width:25%;
 	display:block;
    text-decoration: none;
+    float:left;
     }
-li{
-	float:left;
-    width:25%;
-}
-ul{width:25%;
+.superImportant{
+	color:#000;
+	
+    }
+ul{
 	list-style: none;
-    /*padding-top: 1px*/; 
-    margin: auto;
+    
 }
 nav a:link{
-	color:#fff;
-	/*background-color:#f00*/;
+	color:darkgray;
 }
-    nav a:visited{color:#fff;}
-    nav a:hover{height:20px;
-	color: #ddd;
-	background-color:#fff;
-	font-size:20px;}
+    nav a:visited{color:darkgray;}
+    nav a:hover{color:#f04;
+	font-size:15px;}
     nav a:active{color:#fff;color:#fff;}
 
 section{
-    width:1024px;
-    height: 500px;
-    background-image: url(mag1.jpg);
+    width:90%;
+    height: auto;
+    background-color:#000 ;
+    /*background-image: url(mag1.jpg)*/;
     background-position: center;
     /*background-color: rgba(255,255,255,0.3)*/;
     margin:auto;
@@ -66,19 +70,21 @@ section{
 
 
 footer{
-    width: 1024px;
+    width: 90%;
     height: 25px;
-    font-size:10pt ;
-    font-family: verdana;
+    font-size:10pt;
+    font-family: Helvetica;
     background-color:#000; 
     text-align: center;
     margin:auto;
-    
+    position:relative;
+  
+   
 }
 footer a{
+    display: block;
 	float: left;
     width:100%;
-	text-align: center;
 	text-decoration: none;
     }
 footer a:link{
