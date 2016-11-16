@@ -54,7 +54,7 @@ for (var i=0;i<3; i++){
    obstacles[i].display();
   }
 
- textSize(40);
+ textSize(20);
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
  //text("Rz: " + floor(rotationZ), 100, 200);
