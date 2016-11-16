@@ -40,17 +40,6 @@ function draw() {
  background(255);
  drawBall();
 for (var i=0;i<3; i++){
-   var typeObstacle = 3;
-   if (typeObstacle < 2){
-      typeObstacle = "bonus";
-      this.valeur = 10;
-   } else if (typeObstacle < 1){
-     typeObstacle = "malus";
-     this.valeur = -10;
-   } else{
-     typeObstacle = "neutre";
-     this.valeur = 2;
-   }
    obstacles[i].display();
   }
 
