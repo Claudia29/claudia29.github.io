@@ -3,7 +3,7 @@ var vX, vY;
 var pX, pY;
 var aX, aY;
 var f;
-var R, ri;
+var R;
 var score;
 var obstacles = [];
 function setup() {
