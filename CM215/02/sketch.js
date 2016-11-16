@@ -39,8 +39,8 @@ function draw() {
  drawBall();
 
  textSize(40);
- //text("Rx: " + floor(rotationX), 100, 100);
- //text("Ry: " + floor(rotationY), 100, 150);
+ text("Rx: " + floor(rotationX), 100, 100);
+ text("Ry: " + floor(rotationY), 100, 150);
  //text("Rz: " + floor(rotationZ), 100, 200);
  text("Score:" + score, 100, 200);
  //text(score, 100, 200);
