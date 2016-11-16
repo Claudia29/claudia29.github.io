@@ -20,18 +20,16 @@ pX = windowWidth/2;
  R = ballSize/2;
  score = 0;
  for (var i=0;i<3; i++){
-   var typeObstacle = 3;
+   var typeObstacle = random(0,3);
+   
    if (typeObstacle < 2){
       typeObstacle = "bonus";
-      this.valeur = 10;
    } else if (typeObstacle < 1){
      typeObstacle = "malus";
-     this.valeur = -10;
    } else{
      typeObstacle = "neutre";
-     this.valeur = 2;
    }
-   obstacles[i] = new Obstacle("typeObstacle");
+   obstacles[i] = new Obstacle(typeObstacle);
   }
 }
 
@@ -39,16 +37,14 @@ function draw() {
   
  background(255);
  drawBall();
-for (var i=0;i<3; i++){
-   obstacles[i].display();
-  }
 
  textSize(40);
- text("Rx: " + floor(rotationX), 100, 100);
- text("Ry: " + floor(rotationY), 100, 150);
+ //text("Rx: " + floor(rotationX), 100, 100);
+ //text("Ry: " + floor(rotationY), 100, 150);
  //text("Rz: " + floor(rotationZ), 100, 200);
  text("Score:" + score, 100, 200);
  //text(score, 100, 200);
+ 
  aX = rotationY * f;
  vX += aX;
  pX += vX;
@@ -64,21 +60,13 @@ for (var i=0;i<3; i++){
  if (pY + ballSize/2 > windowHeight || pY - ballSize/2 < 0  ){
    vY = -vY;
  }
- 
-if (dist(pX,pY, this.xPos,this.yPos) <= (R + this.radius)) {
-   //text("s!", width / 2, height / 2, 200, 50);
-   score += this.valeur;
- }
- 
- /*if(dist(pX,pY, pX2,pY2) <= (R + r2)){
-   //text("GA!", width / 2, height / 2, 200, 50);
-   score += -10;
- }
- if(dist(pX,pY, pX3,pY3) <= (R + r3)){
-   //text("GAME!", width / 2, height / 2, 200, 50);
-   score += 1;
- }*/
- 
+ for (var i=0;i<3; i++){
+    
+    if (dist(pX,pY, obstacles[i].xPos,obstacles[i].yPos) <= (R + obstacles[i].radius)) {
+      score += this.valeur;
+    }
+    obstacles[i].display();
+  }
 }
 
 function drawBall(){
@@ -96,6 +84,17 @@ function Obstacle(kind){
  this.color = color(random(0,255),random(0,255),random(0,255));
  this.radius = 25;
  
+ if(kind=="bonus"){
+ this.valeur = 10;
+ }
+ 
+ if(kind=="malus"){
+ this.valeur = -10;
+ }
+ 
+ if(kind=="neutre"){
+ this.valeur = 2;
+ }
  
  this.display = function(){
    fill(this.color);
