@@ -6,6 +6,8 @@ var f;
 var R;
 var score;
 var obstacles = [];
+
+
 function setup() {
  createCanvas(windowWidth,windowHeight);
  ellipseMode(CENTER);
@@ -27,7 +29,18 @@ pX = windowWidth/2;
  r3 = (ballSize/2)/2;*/
  score = 0;
  for (var i=0;i<3; i++){
-  obstacles[i] = new Obstacle("malus");
+   var typeObstacle = 3;
+   if (typeObstacle < 2){
+      typeObstacle = "bonus";
+      this.valeur = 10;
+   } else if (typeObstacle < 1){
+     typeObstacle = "malus";
+     this.valeur = -10;
+   } else{
+     typeObstacle = "neutre";
+     this.valeur = 2;
+   }
+   obstacles[i] = new Obstacle("typeObstacle");
   }
 }
 
@@ -57,9 +70,9 @@ function draw() {
    vY = -vY;
  }
  
-if (dist(pX,pY, this.xPos,this.yPos) <= (R + this.rayon)) {
+if (dist(pX,pY, this.xPos,this.yPos) <= (R + this.radius)) {
    //text("s!", width / 2, height / 2, 200, 50);
-   score += 10;
+   score += this.valeur;
  }
  
  /*if(dist(pX,pY, pX2,pY2) <= (R + r2)){
@@ -94,7 +107,8 @@ function Obstacle(kind){
  this.yPos = random(0,windowHeight);
  this.size = random(20,50);
  this.color = color(random(0,255),random(0,255),random(0,255));
- this.rayon = random(20,50)/2;
+ this.radius = 25;
+ 
  
  this.display = function(){
    fill(this.color);
