@@ -40,8 +40,20 @@ function draw() {
  background(255);
  drawBall();
 for (var i=0;i<3; i++){
-  obstacles[i].display();
+   var typeObstacle = 3;
+   if (typeObstacle < 2){
+      typeObstacle = "bonus";
+      this.valeur = 10;
+   } else if (typeObstacle < 1){
+     typeObstacle = "malus";
+     this.valeur = -10;
+   } else{
+     typeObstacle = "neutre";
+     this.valeur = 2;
+   }
+   obstacles[i].display();
   }
+
  textSize(40);
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
