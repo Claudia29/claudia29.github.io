@@ -14,19 +14,10 @@ function setup() {
  ballSize = 50;
 pX = windowWidth/2;
  pY = windowHeight/2;
- /*pX1 =random(10,windowWidth);
- pY1 = random(10,windowHeight);
- pX2 = random(10,windowWidth);
- pY2 = random(10,windowHeight);
- pX3 = random(10,windowWidth);
- pY3 = random(10,windowHeight);*/
  vX = 0;
  vY = 0;
  f = 0.01;
  R = ballSize/2;
- /*r1 = (ballSize/2)/2;
- r2 = (ballSize/2)/2;
- r3 = (ballSize/2)/2;*/
  score = 0;
  for (var i=0;i<3; i++){
    var typeObstacle = 3;
@@ -48,6 +39,9 @@ function draw() {
   
  background(255);
  drawBall();
+for (var i=0;i<3; i++){
+  obstacles[i].display();
+  }
  textSize(40);
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
@@ -89,16 +83,8 @@ if (dist(pX,pY, this.xPos,this.yPos) <= (R + this.radius)) {
 function drawBall(){
   fill(125);
   ellipse(pX, pY, ballSize,ballSize);
-  /*fill(0,255,0);
-  ellipse(pX1, pY1, ballSize/2,ballSize/2);
-  fill(255,255,0);
-  ellipse(pX2, pY2, ballSize/2,ballSize/2);
-  fill(255,0,0);
-  ellipse(pX3, pY3, ballSize/2,ballSize/2);*/
   
-  for (var i=0;i<3; i++){
-  obstacles[i].display();
-  }
+ 
 }
 
 function Obstacle(kind){
