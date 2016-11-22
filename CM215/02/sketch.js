@@ -19,6 +19,7 @@ pX = windowWidth/2;
  f = 0.01;
  R = ballSize/2;
  score = 0;
+ bN = 0.8;
  for (var i=0;i<3; i++){
    var typeObstacle = random(0,3);
    
@@ -53,13 +54,21 @@ function draw() {
  vY += aY;
  pY += vY;
 
- if (pX + ballSize/2 >= windowWidth || pX - ballSize/2 <= 0  ){
-   vX = -vX;
+ if (pX + ballSize/2 >= windowWidth){
+   vX = -vX * bN;
+ } else if(pX - ballSize/2 <= 0){
+   vX = -vX * bN;
  }
  
- if (pY + ballSize/2 > windowHeight || pY - ballSize/2 < 0  ){
-   vY = -vY;
+ if (pY + ballSize/2 > windowHeight){
+   vY = -vY * bN;
+ }else if(pY - ballSize/2 < 0){
+   vY = -vY * bN; 
  }
+ 
+ 
+ 
+ 
  for (var i=0;i<3; i++){
     
     if (dist(pX,pY, obstacles[i].xPos,obstacles[i].yPos) <= (R + obstacles[i].radius)) {
