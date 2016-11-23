@@ -21,8 +21,13 @@ pX = windowWidth/2;
  R = ballSize/2;
  score = 0;
  bN = 0.8;
+ typeObstacle = 0;
  for (var i=0;i<3; i++){
-   var typeObstacle = random(0,3);
+   if(typeObstacle < 2){
+     typeObstacle++;
+   }else{
+     typeObstacle = 0;
+   }
    
    if (typeObstacle < 2){
       typeObstacle = "bonus";
@@ -40,11 +45,12 @@ function draw() {
  background(255);
  drawBall();
   
- textSize(20);
- text("Rx: " + floor(rotationX), 100, 100);
- text("Ry: " + floor(rotationY), 100, 150);
+ textSize(40);
+ //text("Rx: " + floor(rotationX), 100, 100);
+ //text("Ry: " + floor(rotationY), 100, 150);
  //text("Rz: " + floor(rotationZ), 100, 200);
- text("Score:" + score, 100, 200);
+ fill(255,0,0);
+ text("Score:" + score, windowWidth/2, 30);
  //text(score, 100, 200);
  
  aX = rotationY * f;
