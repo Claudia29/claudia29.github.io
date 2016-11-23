@@ -39,38 +39,35 @@ function draw() {
  background(255);
  drawBall();
   
- textSize(20);
+ textSize(40);
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
  //text("Rz: " + floor(rotationZ), 100, 200);
  text("Score:" + score, 100, 200);
  //text(score, 100, 200);
  
- aX = rotationY * f;
- vX += aX;
- pX += vX;
- 
- aY = rotationX  * f;
- vY += aY;
- pY += vY;
 
  if (pX + ballSize/2 >= windowWidth){
    vX = -vX * bN;
    pX = windowWidth - ballsize/2;
  } else if(pX - ballSize/2 <= 0){
    vX = -vX * bN;
-  
+   pX = ballSize/2;
  }
- 
+ aX = rotationY * f;
+ vX += aX;
+ pX += vX;
  
  if (pY + ballSize/2 > windowHeight){
    vY = -vY * bN;
    pY = windowHeight - ballsize/2;
  }else if(pY - ballSize/2 < 0){
    vY = -vY * bN;
-  
+   pY = ballSize/2;
  }
- 
+ aY = rotationX  * f;
+ vY += aY;
+ pY += vY;
  
   for (var i=0;i<3; i++){
     
@@ -92,9 +89,9 @@ function Obstacle(kind){
  this.type = kind;
  this.xPos = random(0,windowWidth);
  this.yPos = random(0,windowHeight);
- this.size = random(20,50);
+ this.size = 50;
  this.color = color(random(0,255),random(0,255),random(0,255));
- this.radius = this.size/2;
+ this.radius = 25;
  
  if(kind=="bonus"){
  this.valeur = 10;
