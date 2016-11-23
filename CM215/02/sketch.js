@@ -39,35 +39,38 @@ function draw() {
  background(255);
  drawBall();
   
- textSize(40);
+ textSize(20);
  text("Rx: " + floor(rotationX), 100, 100);
  text("Ry: " + floor(rotationY), 100, 150);
  //text("Rz: " + floor(rotationZ), 100, 200);
  text("Score:" + score, 100, 200);
  //text(score, 100, 200);
  
+ aX = rotationY * f;
+ vX += aX;
+ pX += vX;
+ 
+ aY = rotationX  * f;
+ vY += aY;
+ pY += vY;
 
  if (pX + ballSize/2 >= windowWidth){
    vX = -vX * bN;
    pX = windowWidth - ballsize/2;
  } else if(pX - ballSize/2 <= 0){
    vX = -vX * bN;
-   pX = ballSize/2;
+  
  }
- aX = rotationY * f;
- vX += aX;
- pX += vX;
+ 
  
  if (pY + ballSize/2 > windowHeight){
    vY = -vY * bN;
    pY = windowHeight - ballsize/2;
  }else if(pY - ballSize/2 < 0){
    vY = -vY * bN;
-   pY = ballSize/2;
+  
  }
- aY = rotationX  * f;
- vY += aY;
- pY += vY;
+ 
  
   for (var i=0;i<3; i++){
     
