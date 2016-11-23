@@ -66,10 +66,7 @@ function draw() {
    vY = -vY * bN; 
  }
  
- 
- 
- 
- for (var i=0;i<3; i++){
+  for (var i=0;i<3; i++){
     
     if (dist(pX,pY, obstacles[i].xPos,obstacles[i].yPos) <= (R + obstacles[i].radius)) {
       score += this.valeur;
@@ -91,7 +88,7 @@ function Obstacle(kind){
  this.yPos = random(0,windowHeight);
  this.size = random(20,50);
  this.color = color(random(0,255),random(0,255),random(0,255));
- this.radius = 25;
+ this.radius = random((20,50)/2);
  
  if(kind=="bonus"){
  this.valeur = 10;
