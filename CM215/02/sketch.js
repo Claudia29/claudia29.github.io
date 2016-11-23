@@ -4,6 +4,7 @@ var pX, pY;
 var aX, aY;
 var f;
 var R;
+var bN;
 var score;
 var obstacles = [];
 
@@ -89,9 +90,9 @@ function Obstacle(kind){
  this.type = kind;
  this.xPos = random(0,windowWidth);
  this.yPos = random(0,windowHeight);
- this.size = 50;
+ this.size = random(20,50);
  this.color = color(random(0,255),random(0,255),random(0,255));
- this.radius = 25;
+ this.radius = this.size/2;
  
  if(kind=="bonus"){
  this.valeur = 10;
