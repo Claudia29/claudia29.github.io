@@ -86,9 +86,9 @@ function Obstacle(kind){
  this.type = kind;
  this.xPos = random(0,windowWidth);
  this.yPos = random(0,windowHeight);
- this.size = random(20,50);
+ this.size = 50;
  this.color = color(random(0,255),random(0,255),random(0,255));
- this.radius = random((20,50)/2);
+ this.radius = 25;
  
  if(kind=="bonus"){
  this.valeur = 10;
