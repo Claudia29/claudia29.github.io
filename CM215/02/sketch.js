@@ -55,20 +55,20 @@ function draw() {
  vY += aY;
  pY += vY;
  
- if (pX + ballSize/2 >= windowWidth){
+ if (pX + R > windowWidth){
    vX = -vX * bN;
-   pX = windowWidth - ballsize/2;
- } else if(pX - ballSize/2 <= 0){
+   pX = windowWidth - R;
+ } else if(pX - R <= 0){
    vX = -vX * bN;
-   pX = ballSize/2;
+   pX = R;
  }
  
- if (pY + ballSize/2 > windowHeight){
+ if (pY + R > windowHeight){
    vY = -vY * bN;
-   pY = windowHeight - ballsize/2;
- }else if(pY - ballSize/2 < 0){
+   pY = windowHeight - R;
+ }else if(pY - R < 0){
    vY = -vY * bN;
-   pY = ballSize/2;
+   pY = R;
  }
 
  
