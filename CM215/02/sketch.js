@@ -47,7 +47,14 @@ function draw() {
  text("Score:" + score, 100, 200);
  //text(score, 100, 200);
  
-
+ aX = rotationY * f;
+ vX += aX;
+ pX += vX;
+ 
+ aY = rotationX  * f;
+ vY += aY;
+ pY += vY;
+ 
  if (pX + ballSize/2 >= windowWidth){
    vX = -vX * bN;
    pX = windowWidth - ballsize/2;
@@ -55,9 +62,6 @@ function draw() {
    vX = -vX * bN;
    pX = ballSize/2;
  }
- aX = rotationY * f;
- vX += aX;
- pX += vX;
  
  if (pY + ballSize/2 > windowHeight){
    vY = -vY * bN;
@@ -66,9 +70,7 @@ function draw() {
    vY = -vY * bN;
    pY = ballSize/2;
  }
- aY = rotationX  * f;
- vY += aY;
- pY += vY;
+
  
   for (var i=0;i<3; i++){
     
