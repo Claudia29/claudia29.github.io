@@ -75,7 +75,7 @@ function draw() {
   for (var i=0;i<3; i++){
     
     if (dist(pX,pY, obstacles[i].xPos,obstacles[i].yPos) <= (R + obstacles[i].radius)) {
-      score += this.valeur;
+      score += obstacles[i].valeur;
     }
     obstacles[i].display();
   }
