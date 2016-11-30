@@ -44,7 +44,7 @@ function setup() {
     background(255);
     drawBall();
 
-    textSize(40);
+    textSize(20);
     //text("Rx: " + floor(rotationX), 100, 100);
     //text("Ry: " + floor(rotationY), 100, 150);
     //text("Rz: " + floor(rotationZ), 100, 200);
