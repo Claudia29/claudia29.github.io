@@ -40,7 +40,7 @@ nav{
     margin:auto;
     margin-left: 50%;
     top: 45px;
-    /*position: fixed;*/ 
+    position: fixed; 
 }
 nav a{width:25%;
 	display:block;
@@ -61,7 +61,7 @@ nav a:link{
     nav a:visited{color:darkgray;}
     nav a:hover{color:#f04;
 	font-size:15px;}
-    nav a:active{color:#fff;color:#fff;}
+    nav a:active{color:#000;color:#000;}
 
 section{
     width:100%;
