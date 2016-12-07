@@ -44,7 +44,7 @@ function setup() {
     background(255);
     drawBall();
 
-    textSize(20);
+    textSize(40);
     //text("Rx: " + floor(rotationX), 100, 100);
     //text("Ry: " + floor(rotationY), 100, 150);
     //text("Rz: " + floor(rotationZ), 100, 200);
@@ -80,7 +80,14 @@ function setup() {
     for (var i = 0; i < 3; i++) {
 
       if (dist(pX, pY, obstacles[i].xPos, obstacles[i].yPos) <= (R + obstacles[i].radius)) {
-        score += obstacles[i].valeur;
+        
+        if(obstacle[i].colision === false){
+          obstacle[i].colision === true;
+          score += obstacles[i].valeur;
+        }
+        
+      }else{
+        obstacle[i].colision === false;
       }
       obstacles[i].display();
     }
@@ -100,6 +107,7 @@ function setup() {
     this.size = random(20, 50);
     this.color = color(random(0, 255), random(0, 255), random(0, 255));
     this.radius = this.size / 2;
+    this.colision = false;
 
     if (kind == "bonus") {
       this.valeur = 10;
