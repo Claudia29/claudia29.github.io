@@ -81,13 +81,13 @@ function setup() {
 
       if (dist(pX, pY, obstacles[i].xPos, obstacles[i].yPos) <= (R + obstacles[i].radius)) {
         
-        if(obstacle[i].colision === false){
-          obstacle[i].colision === true;
+        if(obstacles[i].colision === false){
+          obstacles[i].colision === true;
           score += obstacles[i].valeur;
         }
         
       }else{
-        obstacle[i].colision === false;
+        obstacles[i].colision === false;
       }
       obstacles[i].display();
     }
