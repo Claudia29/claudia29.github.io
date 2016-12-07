@@ -44,7 +44,7 @@ function setup() {
     background(255);
     drawBall();
 
-    textSize(20);
+    textSize(10);
     //text("Rx: " + floor(rotationX), 100, 100);
     //text("Ry: " + floor(rotationY), 100, 150);
     //text("Rz: " + floor(rotationZ), 100, 200);
@@ -87,7 +87,7 @@ function setup() {
         }
         
       }else{
-        obstacles[i].colision === false;
+        obstacles[i].colision = false;
       }
       obstacles[i].display();
     }
@@ -118,7 +118,7 @@ function setup() {
     }
 
     if (kind == "neutre") {
-      this.valeur = 2;
+      this.valeur = 0;
     }
 
     this.display = function() {
