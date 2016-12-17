@@ -5,7 +5,7 @@ var aX, aY;
 var f;
 var R;
 var bN;
-var score;
+var score, timer;
 var obstacles = [];
 
 
@@ -20,6 +20,7 @@ function setup() {
   f = 0.01;
   R = ballSize / 2;
   score = 0;
+  timer = 1800;
   bN = 0.8;
 
   toto = 0;
@@ -50,6 +51,7 @@ function setup() {
     //text("Rz: " + floor(rotationZ), 100, 200);
     fill(255, 0, 0);
     text("Score:" + score, windowWidth / 2, 30);
+    text("Timer:" + timer, windowWidth / 2, 60);
     //text(score, 100, 200);
 
     aX = rotationY * f;
@@ -119,6 +121,10 @@ function setup() {
 
     if (kind == "neutre") {
       this.valeur = 0;
+    }
+    
+    function Obstacles(level) {
+      
     }
 
     this.display = function() {
