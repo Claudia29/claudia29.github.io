@@ -9,7 +9,7 @@ var score, timer,img;
 var obstacles = [];
 
 function preload(){
- img=loadImage("ocean.png");
+ img=loadImage("forest.jpg");
 }
 
 
