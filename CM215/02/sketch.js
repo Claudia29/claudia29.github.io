@@ -5,8 +5,12 @@ var aX, aY;
 var f;
 var R;
 var bN;
-var score, timer;
+var score, timer,img;
 var obstacles = [];
+
+function preload(){
+ img=loadImage("ocean.png");
+}
 
 
 function setup() {
@@ -42,16 +46,18 @@ function setup() {
 
   function draw() {
 
-    background(255);
+    background(img,100);
     drawBall();
-
+    displayTimer();
+    //displayMessage();
+  
     textSize(20);
     //text("Rx: " + floor(rotationX), 100, 100);
     //text("Ry: " + floor(rotationY), 100, 150);
     //text("Rz: " + floor(rotationZ), 100, 200);
     fill(255, 0, 0);
     text("Score:" + score, windowWidth / 2, 30);
-    text("Timer:" + timer, windowWidth / 2, 60);
+    //text("Timer:" + timer, windowWidth / 2, 60);
     //text(score, 100, 200);
 
     aX = rotationY * f;
@@ -90,6 +96,7 @@ function setup() {
         
       }else{
         obstacles[i].colision = false;
+        
       }
       obstacles[i].display();
     }
@@ -101,6 +108,34 @@ function setup() {
 
 
   }
+  function displayTimer() {
+  noStroke();
+  fill(0);
+  textSize(20);
+  text(int(timer / 60), width / 2 + 100, 30);
+
+  if (timer <= 0) {
+    obstacles[i] = false;
+   
+  }
+  timer--;
+}
+
+function displayMessage() {
+  fill(0, 200, 255);
+  noStroke(0);
+  //strokeWeight(5);
+  rect(width / 2, height / 2, 400, 150, 10);
+  fill(255);
+  noStroke(0);
+  textSize(30);
+  text("GAME OVER!", width / 2, height / 2, 200, 50);
+
+  rect(width / 2, height / 2 + 40, 200, 45, 10);
+  fill(255,125,0);
+  textSize(20);
+  text("EAT AGAIN?", width / 2, height / 2 + 45, 200, 20);
+}
 
   function Obstacle(kind) {
     this.type = kind;
@@ -124,6 +159,47 @@ function setup() {
     }
     
     function Obstacles(level) {
+      if(level=0){
+      for (var i = 0; i < 3; i++) {
+    if (toto === 0) {
+      obstacles[i] = new Obstacle("bonus");
+      toto++;
+    } else if (toto == 1) {
+      obstacles[i] = new Obstacle("malus");
+      toto++;
+    } else if (toto == 2) {
+      obstacles[i] = new Obstacle("neutre");
+      toto = 0;
+    }
+  }
+      }else if(level=1){
+         for (var i = 0; i < 6; i++) {
+    if (toto === 0) {
+      obstacles[i] = new Obstacle("bonus");
+      toto++;
+    } else if (toto == 1) {
+      obstacles[i] = new Obstacle("malus");
+      toto++;
+    } else if (toto == 2) {
+      obstacles[i] = new Obstacle("neutre");
+      toto = 0;
+    }
+  }
+      }else if(level=2){
+        for (var i = 0; i < 9; i++) {
+    if (toto === 0) {
+      obstacles[i] = new Obstacle("bonus");
+      toto++;
+    } else if (toto == 1) {
+      obstacles[i] = new Obstacle("malus");
+      toto++;
+    } else if (toto == 2) {
+      obstacles[i] = new Obstacle("neutre");
+      toto = 0;
+    }
+  }
+      }
+      
       
     }
 
