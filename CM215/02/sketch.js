@@ -43,7 +43,7 @@ function draw() {
   displayTimer();
   displayScore();
   colision();
-  
+  newLevel();
 
 }
 function newLevel(){
@@ -121,7 +121,7 @@ function drawBall() {
 }
 
 function displayScore() {
-  textSize(40);
+  textSize(20);
 
   fill(255, 0, 0);
   text("Score:" + score, windowWidth / 2, 30);
