@@ -56,7 +56,7 @@ function newLevel(){
 /* ******************************************** */
 function newObstacles(newLevel) {
   var toto = 0;
-  for (var i = 0; i < 3*newLevel; i++) {
+  for (var i = 0; i < (3*newLevel); i++) {
     if (toto === 0) {
       obstacles[i] = new Obstacle("bonus");
       toto++;
@@ -73,7 +73,7 @@ function newObstacles(newLevel) {
 
 function colision() {
 
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < (level*3); i++) {
 
     if (dist(pX, pY, obstacles[i].xPos, obstacles[i].yPos) <= (R + obstacles[i].radius)) {
 
@@ -122,7 +122,7 @@ function drawBall() {
 }
 
 function displayScore() {
-  textSize(10);
+  textSize(20);
 
   fill(255, 0, 0);
   text("Score:" + level + "/" + score, windowWidth / 2, 30);
