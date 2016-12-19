@@ -25,6 +25,7 @@ function preload() {
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ellipseMode(CENTER);
+  
   imgBalle = loadImage("bulle2.png");
    imgNeutre = loadImage("neutre.png");
   imgMalus = loadImage("malus.png");
@@ -54,8 +55,12 @@ function draw() {
   displayScore();
   colision();
   newLevel();
+  //gameOver();
 
 }
+
+/* ******************************************** */
+
 function newLevel(){
   if(score >= scoreLevel[level]){
     level++;
@@ -136,7 +141,7 @@ function drawBall() {
 /* ******************************************** */
 
 function displayScore() {
-  textSize(10);
+  textSize(20);
 
   fill(255, 0, 0);
   text("Score:" + level + "/" + score, windowWidth / 2, 30);
@@ -154,12 +159,27 @@ function displayTimer() {
 
 
   if (timer <= 0) {
-    obstacles[i] = false;
-
+    if(score >= scoreLevel[level]){
+    level++;
+    score=0;
+    newObstacles(level);
+    timer=timer + 1800;
+    obstacles[i] = true;
+    }else{
+    gameOver();
+    }
+  
+  }else{
+    timer--;
   }
-  timer--;
 }
 
+/* ******************************************** */
+function gameOver(){
+  fill(255);
+  textSize(20);
+  text("GAME OVER!", windowWidth / 2, windowHeight/2);
+}
 /* ******************************************** */
 
 function Obstacle(kind) {
@@ -192,7 +212,6 @@ this.pic;
 
 this.display = function() {
   fill(this.color);
-  //ellipse(this.xPos, this.yPos, this.size, this.size);
   image(this.pic, this.xPos, this.yPos, this.size, this.size);
 }
 }
