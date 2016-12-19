@@ -16,7 +16,7 @@ function preload() {
   img = loadImage("ocean.png");
   imgBalle = loadImage("bulle2.png");
   imgNeutre = loadImage("neutre.png");
-  imgMalus = loadImage("malus0.png");
+  imgMalus = loadImage("malus.png");
   imgBonus = loadImage("bonus.png");
 }
 
@@ -27,7 +27,7 @@ function setup() {
   ellipseMode(CENTER);
   imgBalle = loadImage("bulle2.png");
    imgNeutre = loadImage("neutre.png");
-  imgMalus = loadImage("malus0.png");
+  imgMalus = loadImage("malus.png");
   imgBonus = loadImage("bonus.png");
   ballSize = 50;
   pX = windowWidth / 2;
