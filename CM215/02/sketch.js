@@ -10,19 +10,22 @@ var obstacles = [];
 var level;
 var scoreLevel =[0,30,60];
 
+/* ******************************************** */
+
 function preload() {
   img = loadImage("ocean.png");
-  imgBalle = loadImage("bulle0.png");
+  imgBalle = loadImage("bulle2.png");
   imgNeutre = loadImage("neutre.png");
   imgMalus = loadImage("malus0.png");
   imgBonus = loadImage("bonus.png");
 }
 
+/* ******************************************** */
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ellipseMode(CENTER);
-  imgBalle = loadImage("bulle0.png");
+  imgBalle = loadImage("bulle2.png");
    imgNeutre = loadImage("neutre.png");
   imgMalus = loadImage("malus0.png");
   imgBonus = loadImage("bonus.png");
@@ -41,6 +44,8 @@ level = 1;
   newObstacles(level);
 }
 
+/* ******************************************** */
+
 function draw() {
   background(img, width / 2, height / 2);
 
@@ -58,7 +63,9 @@ function newLevel(){
     timer=timer + 1800;
   }
 }
+
 /* ******************************************** */
+
 function newObstacles(newLevel) {
   var toto = 0;
   for (var i = 0; i < (3*newLevel); i++) {
@@ -74,6 +81,7 @@ function newObstacles(newLevel) {
     }
   }
 }
+
 /* ******************************************** */
 
 function colision() {
@@ -94,6 +102,8 @@ function colision() {
     obstacles[i].display();
   }
 }
+
+/* ******************************************** */
 
 function drawBall() {
   image(imgBalle, pX, pY, ballSize, ballSize);
@@ -123,13 +133,16 @@ function drawBall() {
 
 
 }
+/* ******************************************** */
 
 function displayScore() {
-  textSize(10);
+  textSize(20);
 
   fill(255, 0, 0);
   text("Score:" + level + "/" + score, windowWidth / 2, 30);
 }
+
+/* ******************************************** */
 
 function displayTimer() {
   fill(255);
@@ -147,21 +160,7 @@ function displayTimer() {
   timer--;
 }
 
-/*function displayMessage() {
-  fill(0, 200, 255);
-  noStroke(0);
-  //strokeWeight(5);
-  rect(width / 2, height / 2, 400, 150, 10);
-  fill(255);
-  noStroke(0);
-  textSize(30);
-  text("GAME OVER!", width / 2, height / 2, 200, 50);
-
-  rect(width / 2, height / 2 + 40, 200, 45, 10);
-  fill(255, 125, 0);
-  textSize(20);
-  text("EAT AGAIN?", width / 2, height / 2 + 45, 200, 20);
-}*/
+/* ******************************************** */
 
 function Obstacle(kind) {
   this.type = kind;
