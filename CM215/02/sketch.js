@@ -8,6 +8,7 @@ var bN;
 var score, timer, img, imgBalle, imgObst;
 var obstacles = [];
 var level;
+var scoreLevel =[0,30,60];
 
 function preload() {
   img = loadImage("ocean.png");
@@ -47,7 +48,7 @@ function draw() {
 
 }
 function newLevel(){
-  if(score >= 30){
+  if(score >= scoreLevel[level]){
     level++;
     newObstacles(level);
   }
@@ -121,7 +122,7 @@ function drawBall() {
 }
 
 function displayScore() {
-  textSize(20);
+  textSize(10);
 
   fill(255, 0, 0);
   text("Score:" + score, windowWidth / 2, 30);
