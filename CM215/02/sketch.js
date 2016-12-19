@@ -5,24 +5,27 @@ var aX, aY;
 var f;
 var R;
 var bN;
-var score, timer, img, imgBalle, imgObst, imgMalus;
+var score, timer, img, imgBalle, imgNeutre, imgMalus, imgBonus;
 var obstacles = [];
 var level;
 var scoreLevel =[0,30,60];
 
 function preload() {
   img = loadImage("ocean.png");
-  imgBalle = loadImage("Bulle.png");
-  imgObst = loadImage("bulle1.png");
-  imgMalus = loadImage("Bulle.png");
+  imgBalle = loadImage("bulle0.png");
+  imgNeutre = loadImage("neutre.png");
+  imgMalus = loadImage("malus0.png");
+  imgBonus = loadImage("bonus.png");
 }
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ellipseMode(CENTER);
-  imgBalle = loadImage("Bulle.png");
-  imgObst = loadImage("bulle1.png");
+  imgBalle = loadImage("bulle0.png");
+   imgNeutre = loadImage("neutre.png");
+  imgMalus = loadImage("malus0.png");
+  imgBonus = loadImage("bonus.png");
   ballSize = 50;
   pX = windowWidth / 2;
   pY = windowHeight / 2;
@@ -93,8 +96,6 @@ function colision() {
 }
 
 function drawBall() {
-  //fill(125);
-  //ellipse(pX, pY, ballSize, ballSize);
   image(imgBalle, pX, pY, ballSize, ballSize);
   aX = rotationY * f;
   vX += aX;
@@ -146,7 +147,7 @@ function displayTimer() {
   timer--;
 }
 
-function displayMessage() {
+/*function displayMessage() {
   fill(0, 200, 255);
   noStroke(0);
   //strokeWeight(5);
@@ -160,21 +161,23 @@ function displayMessage() {
   fill(255, 125, 0);
   textSize(20);
   text("EAT AGAIN?", width / 2, height / 2 + 45, 200, 20);
-}
+}*/
 
 function Obstacle(kind) {
   this.type = kind;
-  this.xPos = random(0, windowWidth);
-  this.yPos = random(0, windowHeight);
   this.size = random(20, 50);
-  this.color = color(random(0, 255), random(0, 255), random(0, 255));
   this.radius = this.size / 2;
+  this.xPos = random(this.radius, windowWidth - this.radius);
+  this.yPos = random(this.radius, windowHeight - this.radius);
+  
+  this.color = color(random(0, 255), random(0, 255), random(0, 255));
+ 
   this.colision = false;
 this.pic;
 
   if (kind == "bonus") {
     this.valeur = 10;
-    this.pic = imgObst;
+    this.pic = imgBonus;
   }
 
   if (kind == "malus") {
@@ -184,7 +187,7 @@ this.pic;
 
   if (kind == "neutre") {
     this.valeur = 0;
-    this.pic = imgObst;
+    this.pic = imgNeutre;
   }
 
 
