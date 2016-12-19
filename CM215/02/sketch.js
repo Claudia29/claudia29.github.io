@@ -125,7 +125,7 @@ function displayScore() {
   textSize(10);
 
   fill(255, 0, 0);
-  text("Score:" + score, windowWidth / 2, 30);
+  text("Score:" + level + "/" + score, windowWidth / 2, 30);
 }
 
 function displayTimer() {
