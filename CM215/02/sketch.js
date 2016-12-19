@@ -5,7 +5,7 @@ var aX, aY;
 var f;
 var R;
 var bN;
-var score, timer, img, imgBalle, imgObst;
+var score, timer, img, imgBalle, imgObst, imgMalus;
 var obstacles = [];
 var level;
 var scoreLevel =[0,30,60];
@@ -14,6 +14,7 @@ function preload() {
   img = loadImage("ocean.png");
   imgBalle = loadImage("Bulle.png");
   imgObst = loadImage("bulle1.png");
+  imgMalus = loadImage("Bulle.png");
 }
 
 
@@ -51,6 +52,7 @@ function newLevel(){
   if(score >= scoreLevel[level]){
     level++;
     newObstacles(level);
+    timer=timer + 1800;
   }
 }
 /* ******************************************** */
@@ -122,7 +124,7 @@ function drawBall() {
 }
 
 function displayScore() {
-  textSize(20);
+  textSize(10);
 
   fill(255, 0, 0);
   text("Score:" + level + "/" + score, windowWidth / 2, 30);
@@ -168,27 +170,27 @@ function Obstacle(kind) {
   this.color = color(random(0, 255), random(0, 255), random(0, 255));
   this.radius = this.size / 2;
   this.colision = false;
+this.pic;
 
   if (kind == "bonus") {
     this.valeur = 10;
+    this.pic = imgObst;
   }
 
   if (kind == "malus") {
     this.valeur = -10;
+    this.pic = imgMalus;
   }
 
   if (kind == "neutre") {
     this.valeur = 0;
+    this.pic = imgObst;
   }
-
-
-
-
 
 
 this.display = function() {
   fill(this.color);
   //ellipse(this.xPos, this.yPos, this.size, this.size);
-  image(imgObst, this.xPos, this.yPos, this.size, this.size);
+  image(this.pic, this.xPos, this.yPos, this.size, this.size);
 }
 }
