@@ -144,7 +144,8 @@ function displayScore() {
   textSize(20);
 
   fill(255, 0, 0);
-  text("Score:" + level + "/" + score, windowWidth / 2, 30);
+  text("Score:" + score, windowWidth / 2, 30);
+  text("Level:" + level , windowWidth / 2 + 150,30);
 }
 
 /* ******************************************** */
@@ -178,7 +179,8 @@ function displayTimer() {
 function gameOver(){
   fill(255);
   textSize(20);
-  text("GAME OVER!", windowWidth / 2, windowHeight/2);
+  //textAlign = CENTER; 
+  text("GAME OVER!", windowWidth / 2 - 100 , windowHeight/2, 200,50);
 }
 /* ******************************************** */
 
