@@ -5,17 +5,21 @@ var aX, aY;
 var f;
 var R;
 var bN;
-var score, timer,img;
+var score, timer,img,imgBalle,imgObst;
 var obstacles = [];
 
 function preload(){
- img=loadImage("forest.jpg");
+ img=loadImage("ocean.png");
+ imgBalle=loadImage("Bulle.png");
+ imgObst=loadImage("bulle1.png");
 }
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   ellipseMode(CENTER);
+  imgBalle=loadImage("Bulle.png");
+  imgObst=loadImage("bulle1.png");
   ballSize = 50;
   pX = windowWidth / 2;
   pY = windowHeight / 2;
@@ -46,7 +50,8 @@ function setup() {
 
   function draw() {
 
-    background(img,100);
+    background(img,width/2,height/2);
+    //image(img, width/2, height/2);
     drawBall();
     displayTimer();
     //displayMessage();
@@ -103,8 +108,9 @@ function setup() {
   }
 
   function drawBall() {
-    fill(125);
-    ellipse(pX, pY, ballSize, ballSize);
+    //fill(125);
+    //ellipse(pX, pY, ballSize, ballSize);
+    image(imgBalle,pX, pY, ballSize, ballSize);
 
 
   }
@@ -205,6 +211,7 @@ function displayMessage() {
 
     this.display = function() {
       fill(this.color);
-      ellipse(this.xPos, this.yPos, this.size, this.size);
+      //ellipse(this.xPos, this.yPos, this.size, this.size);
+      image(imgObst,this.xPos, this.yPos, this.size, this.size);
     }
   }
