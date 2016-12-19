@@ -115,10 +115,13 @@ function setup() {
 
   }
   function displayTimer() {
+  fill(255);
+  ellipse(windowWidth/2+110,22, 30,30);
   noStroke();
-  fill(0);
   textSize(20);
+  fill(0);
   text(int(timer / 60), width / 2 + 100, 30);
+ 
 
   if (timer <= 0) {
     obstacles[i] = false;
